@@ -11,7 +11,7 @@
             z-index: -1;
         }
         .hero-overlay {
-            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,2 rgba(0,0,0,0.) 100%);
         }
         .nav-link {
             position: relative;
@@ -23,7 +23,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: #3b82f6;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,2 rgba(0,0,0,0.) 100%);
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
