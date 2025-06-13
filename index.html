@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self">
+    <title>Augustine Udefa Foundation - Education Empowerment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/imgg.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+       <link rel="stylesheet" href="main.css">
+    
+   
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 font-sans">
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between h-20 items-center">
+    <div class="flex items-center flex-shrink-0">
+      <a href="#" id="logo-link">
+        <img
+          src="img/imgg.png"
+          alt="Logo"
+          class="h-8 w-auto sm:h-10 md:h-12 lg:h-16 object-contain"
+        >
+      </a>
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+         <a href="index.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="home-link">Home</a>
+      <a href="about.html" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="about-link">About</a>
+      
+      <a href="#programs" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="programs-link">Programs</a>
+      <a href="#events" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="events-link">Events</a>
+      <a href="#trustees" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="trustees-link">Volunteer</a>
+      <a href="#donate" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white" id="donate-link">Donate</a>
+    </div>
+    <button class="md:hidden text-gray-500 dark:text-gray-400" id="mobile-menu-button">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
+</nav>
+
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                 <a href="index.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-home-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-about-link">About</a>
+                
+                <a href="#programs" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-programs-link">Programs</a>
+                <a href="#events" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-events-link">Events</a>
+                <a href="#trustees" class="block px-3 py-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" id="mobile-trustees-link">Volunteer</a>
+                <a href="#donate" class="block px-3 py-2 rounded-lg  text-grey-700  hover:bg-gray-100 id="mobile-donate-link">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-happy-african-american-student-holding-books-20621-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 px-4 max-w-3xl ml-4 sm:ml-12 md:ml-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Empowering Nigeria's Future Through Education</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">The Augustine Udefa Foundation provides scholarships, resources, and opportunities to bright students across Nigeria.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#programs" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium" id="apply-link">Apply for Scholarship</a>
+                <a href="#donate" class="px-6 py-3 bg-gold-500 text-white rounded-lg hover:bg-gray-100 transition-colors font-medium" id="support-link">Support Our Cause</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">About the Foundation</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Our Vision</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Founded in 2012 by philanthropist Augustine Udefa, our foundation is dedicated to creating educational opportunities for underprivileged students across Nigeria. We believe education is the most powerful tool for breaking the cycle of poverty.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">To date, we've awarded over 1,200 scholarships, built 3 school libraries, and provided essential learning materials to 15,000+ students in rural communities.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-500 mb-2">1,200+</div>
+                            <div class="text-gray-600 dark:text-gray-300">Scholarships Awarded</div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-500 mb-2">15K+</div>
+                            <div class="text-gray-600 dark:text-gray-300">Students Impacted</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                         alt="African students in classroom" 
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board of Trustees Section -->
+    <section id="trustees" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Board of Trustees</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Our distinguished board members guide the foundation's vision and ensure our programs create maximum impact.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Trustee 1 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('augustine')">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Augustine Udefa" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Augustine Udefa</h3>
+                        <p class="text-gold-500 font-medium mb-3">Founder & Chairman</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Former CEO of Udefa Holdings, philanthropist with 20+ years in education advocacy.</p>
+                    </div>
+                </div>
+                
+                <!-- Trustee 2 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('amina')">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Dr. Amina Okeke" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Dr. Amina Okeke</h3>
+                        <p class="text-gold-500 font-medium mb-3">Education Director</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Professor of Education at University of Lagos, specializing in curriculum development.</p>
+                    </div>
+                </div>
+                
+                <!-- Trustee 3 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('chioma')">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" 
+                             alt="Chioma Eze" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Chioma Eze</h3>
+                        <p class="text-gold-500 font-medium mb-3">Finance Director</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Chartered accountant with expertise in nonprofit financial management.</p>
+                    </div>
+                </div>
+                
+                <!-- Trustee 4 -->
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 trustee-card cursor-pointer" onclick="openTrusteeModal('emeka')">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Emeka Nwankwo" 
+                             class="w-full h-full object-cover transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Emeka Nwankwo</h3>
+                        <p class="text-gold-500 font-medium mb-3">Programs Director</p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Social entrepreneur with extensive experience in youth development programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trustee Modals -->
+    <!-- Augustine Udefa Modal -->
+    <div id="augustine-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Augustine Udefa</h3>
+                        <p class="text-gold-500 font-medium">Founder & Chairman</p>
+                    </div>
+                    <button onclick="closeModal('augustine-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Augustine Udefa" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Augustine Udefa is a visionary entrepreneur and philanthropist who founded the Augustine Udefa Foundation in 2012. With over 30 years of business experience as the former CEO of Udefa Holdings, he has dedicated the past decade to transforming education in Nigeria.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Born in a rural village in Enugu State, Augustine understands firsthand the transformative power of education. Despite humble beginnings, he earned a scholarship to study Business Administration at the University of Lagos, which launched his successful career.
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Key Achievements:</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li>Founded AUF in 2012 with initial personal investment of ₦500 million</li>
+                                <li>Recipient of the National Honor of Member of the Order of the Niger (MON)</li>
+                                <li>Named "Philanthropist of the Year" by ThisDay Newspaper in 2018</li>
+                                <li>Established 3 fully equipped school libraries in rural communities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('augustine-modal')" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dr. Amina Okeke Modal -->
+    <div id="amina-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Dr. Amina Okeke</h3>
+                        <p class="text-gold-500 font-medium">Education Director</p>
+                    </div>
+                    <button onclick="closeModal('amina-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                             alt="Dr. Amina Okeke" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Dr. Amina Okeke brings over 25 years of academic excellence to her role as Education Director. As a Professor of Education at the University of Lagos, she specializes in curriculum development and educational policy.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            With a PhD in Educational Psychology from the University of Ibadan, Dr. Okeke has published numerous papers on effective learning methodologies in African contexts. She joined the AUF board in 2015 and has since revolutionized our scholarship selection criteria.
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Key Contributions:</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li>Developed AUF's merit-based scholarship assessment framework</li>
+                                <li>Pioneered the foundation's teacher training programs</li>
+                                <li>Led the design of 3 STEM-focused curricula for rural schools</li>
+                                <li>Recipient of the Nigerian Academy of Education blue Medal (2019)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('amina-modal')" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chioma Eze Modal -->
+    <div id="chioma-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Chioma Eze</h3>
+                        <p class="text-gold-500 font-medium">Finance Director</p>
+                    </div>
+                    <button onclick="closeModal('chioma-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" 
+                             alt="Chioma Eze" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Chioma Eze is a Fellow of the Institute of Chartered Accountants of Nigeria (ICAN) with 18 years of financial management experience. She oversees all financial operations of the foundation, ensuring transparency and accountability.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Before joining AUF in 2016, Chioma served as CFO for a leading Nigerian bank, where she implemented innovative financial strategies. Her expertise has helped the foundation maximize the impact of every donated naira.
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Financial Milestones:</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li>Reduced administrative costs by 35% while increasing program funding</li>
+                                <li>Implemented blockchain-based donation tracking system</li>
+                                <li>Maintained 100% clean audit reports since joining the foundation</li>
+                                <li>Spearheaded endowment fund that now stands at ₦2.3 billion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('chioma-modal')" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emeka Nwankwo Modal -->
+    <div id="emeka-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden modal-overlay">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-2xl mx-4 modal-content">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Emeka Nwankwo</h3>
+                        <p class="text-blue-500 font-medium">Programs Director</p>
+                    </div>
+                    <button onclick="closeModal('emeka-modal')" class="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Emeka Nwankwo" 
+                             class="w-full rounded-lg">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Emeka Nwankwo is a social entrepreneur who has dedicated his career to youth development. As Programs Director since 2014, he oversees all scholarship distributions, mentorship programs, and community initiatives.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            With degrees in Sociology and Public Administration, Emeka brings a unique perspective to educational access. His "Whole Child" approach ensures scholarship recipients receive holistic support beyond just tuition payments.
+                        </p>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Program Innovations:</h4>
+                            <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-1">
+                                <li>Created AUF's award-winning mentorship program</li>
+                                <li>Expanded scholarship reach to 12 additional states</li>
+                                <li>Developed the "Digital Literacy for All" initiative</li>
+                                <li>Implemented alumni tracking system with 92% engagement rate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal('emeka-modal')" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Recent Initiatives</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Discover our latest projects and events making an impact in Nigerian education.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mosquito Net Donation Event -->
+                <div class="relative bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+                  
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Mosquito Net Donation Drive</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">In partnership with Government College Nigeria, we distributed 400 long-lasting insecticide-treated mosquito nets to boarding students to combat malaria and improve school attendance.</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 mr-4">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Mosquito nets" 
+                                     class="w-16 h-16 rounded-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Impact:</p>
+                                <p class="font-medium text-gray-900 dark:text-white">Reduced malaria cases by 60% among recipients</p>
+                            </div>
+                              <div class="event-date">May 2023</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Scholarship Award Ceremony -->
+                <div class="relative bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+                    <div class="event-date">March 2023</div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Annual Scholarship Awards</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Celebrated 75 new scholarship recipients at our annual awards ceremony in Lagos. This year's cohort includes students from 12 states across Nigeria.</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 mr-4">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Scholarship awards" 
+                                     class="w-16 h-16 rounded-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Impact:</p>
+                                <p class="font-medium text-gray-900 dark:text-white">₦25 million in scholarships awarded</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 text-gray-900 text-white rounded-lg bg-gold-500 transition-colors font-medium inline-flex items-center" id="all-events-link">
+                    View All Events
+                    <i class="fas fa-calendar-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Scholarship Programs</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">We offer comprehensive support to students at all academic levels.</p>
+                <div class="w-20 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-school text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Secondary School Scholarships</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Full tuition coverage for high-performing students in public secondary schools across Nigeria.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Covers tuition and textbooks
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Mentorship program
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Annual summer camp
+                            </li>
+                        </ul>
+                        <a href="#" class="text-gold-500 hover:text-blue-600 font-medium inline-flex items-center" id="secondary-link">
+                            Apply now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover transform scale-105">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-university text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">University Scholarships</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Comprehensive support for undergraduate students in accredited Nigerian universities.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Full tuition coverage
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Stipend for living expenses
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Internship opportunities
+                            </li>
+                        </ul>
+                        <a href="#" class="text-gold-500 hover:text-blue-600 font-medium inline-flex items-center" id="university-link">
+                            Apply now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-xl shadow-md overflow-hidden transition-all duration-300 card-hover">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Postgraduate Fellowships</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">Support for exceptional students pursuing master's and doctoral degrees.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Full tuition and research grants
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                International conference funding
+                            </li>
+                            <li class="flex items-center text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                Faculty mentorship
+                            </li>
+                        </ul>
+                        <a href="#" class="text-gold-500 hover:text-blue-600 font-medium inline-flex items-center" id="postgrad-link">
+                            Apply now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section
+    <section id="donate" class="py-20 bg-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Support Changes Lives</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto">Every contribution helps us provide more scholarships and educational resources to deserving students.</p>
+                <div class="w-20 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Make a Donation</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Amount (₦)</label>
+                            <div class="grid grid-cols-4 gap-2 mb-4">
+                                <button type="button" class="py-2 border border-gray-300 rounded-lg hover:bg-gray-100 focus:bg-blue-100 focus:border-blue-500 focus:text-blue-500" data-amount="5000">₦5,000</button>
+                                <button type="button" class="py-2 border border-gray-300 rounded-lg hover:bg-gray-100 focus:bg-blue-100 focus:border-blue-500 focus:text-blue-500" data-amount="10000">₦10,000</button>
+                                <button type="button" class="py-2 border border-gray-300 rounded-lg hover:bg-gray-100 focus:bg-blue-100 focus:border-blue-500 focus:text-blue-500" data-amount="25000">₦25,000</button>
+                                <button type="button" class="py-2 border border-gray-300 rounded-lg hover:bg-gray-100 focus:bg-blue-100 focus:border-blue-500 focus:text-blue-500" data-amount="50000">₦50,000</button>
+                            </div>
+                            <input type="number" placeholder="Or enter custom amount" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Payment Method</label>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <input type="radio" name="payment" id="card" class="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300" checked>
+                                    <label for="card" class="ml-2 block text-gray-700">Credit/Debit Card</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" name="payment" id="bank" class="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300">
+                                    <label for="bank" class="ml-2 block text-gray-700">Bank Transfer</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" name="payment" id="mobile" class="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300>
+                                    <label for="mobile" class="ml-2 block text-gray-700">Mobile Money</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-gold-500 text-white rounded-lg hover:bg-blue-600 transition-colors font-medium">Donate Now</button>
+                    </form>
+                </div>
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold mb-6">What Your Donation Supports</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-book text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">Textbooks & Supplies</h4>
+                                <p class="text-blue-100 mt-1">₦5,000 provides textbooks for one student for a year</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-school text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">Secondary Education</h4>
+                                <p class="text-blue-100 mt-1">₦50,000 covers one year of secondary school tuition</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-graduation-cap text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold">University Scholarship</h4>
+                                <p class="text-blue-100 mt-1">₦250,000 funds a full university scholarship for one year</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Augustine Udefa Foundation</h3>
+                    <p class="text-gray-400">Empowering Nigerian youth through education since 2012.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors" id="footer-about-link">About Us</a></li>
+                        <li><a href="#trustees" class="text-gray-400 hover:text-white transition-colors" id="footer-trustees-link">Board of Trustees</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition-colors" id="footer-programs-link">Scholarship Programs</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition-colors" id="footer-events-link">Our Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> 15 Education Way, Victoria Island, Lagos</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> +234 803 123 4567</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> info@auf.org.ng</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl" id="footer-facebook-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl" id="footer-twitter-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl" id="footer-instagram-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl" id="footer-linkedin-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Augustine Udefa Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>     // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times text-xl"></i>';
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                }
+            });
+        }</script>
+</body>
+</html>
