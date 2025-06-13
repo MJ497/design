@@ -23,7 +23,7 @@
             height: 2px;
             bottom: -2px;
             left: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%,2 rgba(0,0,0,0.) 100%);
+            background: #011535;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
@@ -79,4 +79,30 @@
         .contact-input:focus {
             border-color: #E68B31;
             box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+                
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .accordion-header {
+            transition: all 0.3s ease;
+        }
+        .accordion-header:hover {
+            color: #d4af37;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
         }
