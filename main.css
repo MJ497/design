@@ -1,4 +1,7 @@
-        .hero-video {
+     *{
+        outline: none;
+     }
+     .hero-video {
             position: absolute;
             top: 0;
             left: 0;
@@ -37,7 +40,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background-color: #3b82f6;
+            background-color:rgb(30 58 138 / var(--tw-text-opacity, 1));
             color: white;
             padding: 8px 16px;
             border-radius: 9999px;
