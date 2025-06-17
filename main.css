@@ -46,6 +46,31 @@
             border-radius: 9999px;
             font-weight: 600;
         }
+          .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        /* .event-date {
+            position: relative;
+        } */
+        /* .event-date::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            bottom: -8px;
+            left: 0;
+            background-color: #d4af37;
+        } */
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background-color: #e5e7eb;
+        }
         .modal-overlay {
             background-color: rgba(0,0,0,0.7);
         }
@@ -105,4 +130,17 @@
         }
         .rotate-180 {
             transform: rotate(180deg);
+        }
+         .volunteer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .volunteer-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 20px;
         }
