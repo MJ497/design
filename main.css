@@ -144,3 +144,22 @@
             border-radius: 12px;
             margin-bottom: 20px;
         }
+         .donation-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .donation-option.selected {
+            border-color: #d4af37;
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+        .form-input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        .payment-method {
+            transition: all 0.3s ease;
+        }
+        .payment-method.selected {
+            border-color: #d4af37;
+            background-color: rgba(212, 175, 55, 0.05);
+        }
