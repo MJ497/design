@@ -70,11 +70,8 @@
             });
         });
 
-        // Form submission handlers
-        document.querySelector('form')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your donation to the Augustine Udefa Foundation!');
-        });
+        
+       
 
         // All other interactive elements
         document.getElementById('all-events-link')?.addEventListener('click', function(e) {
