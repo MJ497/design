@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Augustine Udefa Orphan Scholarship</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body class="bg-white dark:bg-gray-900">
+  <!-- Navbar with logo and back arrow only -->
+  <header class="bg-white dark:bg-gray-900 shadow-md py-4 px-6 flex items-center justify-between">
+    <button onclick="window.history.back()" class="text-gray-700 dark:text-gray-300 hover:text-gold-500 text-2xl mr-4" aria-label="Go Back">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="flex items-center">
+      <img src="img/imgg.png" alt="Foundation Logo" class="h-10 w-auto">
+    </div>
+    <div style="width:2.5rem;"></div> <!-- Spacer to balance flex -->
+  </header>
+
+  <main class="max-w-2xl mx-auto py-10 px-4">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Augustine Udefa Orphan Scholarship</h1>
+    <div class="text-gray-700 dark:text-gray-300 space-y-4">
+      <p>The Augustine Udefa Orphan Scholarship is awarded to people who have lost both parents and do not have any sponsor to support their education. Successful applicants are those who, without the scholarship, would be unable to acquire an education. This scholarship is awarded to applicants in both secondary and tertiary institutions in Nigeria.</p>
+      <h2 class="font-semibold text-lg">Eligibility</h2>
+      <ul class="list-disc ml-6">
+        <li>You have lost both of your parents and do not have any sponsor.</li>
+        <li>You have successfully gained admission into or are in a public tertiary institution in Nigeria if you intend to acquire tertiary education.</li>
+        <li>You are in a public secondary school in good academic standing and can no longer continue your education because of the demise of your parents.</li>
+      </ul>
+      <h2 class="font-semibold text-lg">Scholarship Value</h2>
+      <ul class="list-disc ml-6">
+        <li>Full tuition fee throughout your program.</li>
+      </ul>
+      <h2 class="font-semibold text-lg">Application Requirements</h2>
+      <ul class="list-disc ml-6">
+        <li>Admission letter</li>
+        <li>Curriculum vitae</li>
+        <li>Personal statement (500–1000 words), explaining your situation.</li>
+        <li>Academic report from your school, showing your grades and other necessary information.</li>
+        <li>Three letters of recommendation, confirming that you have lost both of your parents and can no longer continue your education. Two should come from religious leaders and one from your teacher.</li>
+        <li>An attestation letter from your head of department or school authority, confirming that you have been admitted into or are currently enrolled in your school.</li>
+      </ul>
+      <h2 class="font-semibold text-lg">Renewal of the Scholarship</h2>
+      <ul class="list-disc ml-6">
+        <li>Have a minimum cumulative grade point average (CGPA) of 3.5 on a 5.0 scale or 2.5 on a 4.0 scale.</li>
+        <li>Submit a letter from your head of department or institution, confirming your CGPA and ability to complete your studies in due time.</li>
+        <li>Submit two attestation letters from two academic referees, attesting to your good moral conduct.</li>
+      </ul>
+      <h2 class="font-semibold text-lg">Termination of Scholarship</h2>
+      <ul class="list-disc ml-6">
+        <li>You do not meet the minimum CGPA requirement for renewal.</li>
+        <li>You are rusticated from your institution because of misconduct of any form.</li>
+        <li>You are seen making or sharing posts on social media that promote nudity and sexual immorality.</li>
+      </ul>
+      <h2 class="font-semibold text-lg">How to Apply</h2>
+      <ul class="list-disc ml-6">
+        <li>Click on the “Apply” button to begin your application. Complete the application form and upload all required documents.</li>
+      </ul>
+    </div>
+
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Application Form</h2>
+      <form class="space-y-4 bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md">
+        <div>
+          <label for="applicant-name" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Full Name</label>
+          <input type="text" id="applicant-name" name="applicant-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="dob" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Date of Birth</label>
+          <input type="date" id="dob" name="dob" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="gender" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Gender</label>
+          <select id="gender" name="gender" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 text-gray-900" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="nationality" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Nationality</label>
+          <input type="text" id="nationality" name="nationality" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="state-of-origin" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">State of Origin</label>
+          <input type="text" id="state-of-origin" name="state-of-origin" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="religion" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Religion</label>
+          <input type="text" id="religion" name="religion" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="contact-number" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Contact Number</label>
+          <input type="tel" id="contact-number" name="contact-number" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="applicant-email" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Email Address</label>
+          <input type="email" id="applicant-email" name="applicant-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="permanent-address" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Permanent Address</label>
+          <textarea id="permanent-address" name="permanent-address" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required></textarea>
+        </div>
+        <hr class="my-6 border-gray-300 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Academic Information</h3>
+        <div>
+          <label for="institution" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Current Institution/School</label>
+          <input type="text" id="institution" name="institution" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 text-gray-900" required>
+        </div>
+        <div>
+          <label for="level" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Level (Secondary/Tertiary)</label>
+          <select id="level" name="level" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 text-gray-900" required>
+            <option value="">Select</option>
+            <option value="secondary">Secondary School</option>
+            <option value="tertiary">Tertiary Institution</option>
+          </select>
+        </div>
+        <div>
+          <label for="course-of-study" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Course of Study (if applicable)</label>
+          <input type="text" id="course-of-study" name="course-of-study" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400">
+        </div>
+        <div>
+          <label for="cgpa" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Current CGPA (if applicable)</label>
+          <input type="text" id="cgpa" name="cgpa" class="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" placeholder="e.g. 4.35 / 5.0">
+        </div>
+        <div>
+          <label for="admission-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Admission Letter (PDF)</label>
+          <input type="file" id="admission-letter" name="admission-letter" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="cv" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Curriculum Vitae (PDF)</label>
+          <input type="file" id="cv" name="cv" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="personal-statement" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Personal Statement (PDF)</label>
+          <input type="file" id="personal-statement" name="personal-statement" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="academic-report" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Academic Report (PDF)</label>
+          <input type="file" id="academic-report" name="academic-report" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="recommendation-1" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Recommendation Letter 1 (Religious Leader, PDF)</label>
+          <input type="file" id="recommendation-1" name="recommendation-1" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="recommendation-2" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Recommendation Letter 2 (Religious Leader, PDF)</label>
+          <input type="file" id="recommendation-2" name="recommendation-2" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="recommendation-3" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Recommendation Letter 3 (Teacher, PDF)</label>
+          <input type="file" id="recommendation-3" name="recommendation-3" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <div>
+          <label for="attestation-letter" class="block text-sm font-medium mb-1 dark:text-white text-gray-900">Attestation Letter (PDF)</label>
+          <input type="file" id="attestation-letter" name="attestation-letter" accept="application/pdf" class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400" required>
+        </div>
+        <button type="submit" class="w-full py-3 px-4 bg-gold-500 text-white rounded-lg hover:bg-gold-600 font-semibold">Submit Application</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
