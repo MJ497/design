@@ -125,26 +125,31 @@
                     <p class="text-gray-600 dark:text-gray-300 mb-6">Your generous support helps us continue our mission to empower Nigerian youth.</p>
                     
                     <form id="donation-form" class="space-y-6">
-                        <!-- Donation Amount -->
+                        <!-- Currency Selection & Donation Amount -->
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Donation Amount (USD) *</label>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Currency *</label>
+                            <select id="currency-select" name="currency-select" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg mb-4 dark:bg-gray-700 dark:text-white">
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="NGN">Nigerian Naira (₦)</option>
+                            </select>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Donation Amount (<span id="currency-label">USD</span>) *</label>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                                 <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="25">
-                                    <span class="font-medium text-gray-900 dark:text-white">$25</span>
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-1">$25</span>
                                 </button>
                                 <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="50">
-                                    <span class="font-medium text-gray-900 dark:text-white">$50</span>
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-2">$50</span>
                                 </button>
                                 <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="100">
-                                    <span class="font-medium text-gray-900 dark:text-white">$100</span>
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-3">$100</span>
                                 </button>
                                 <button type="button" class="donation-option py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg text-center transition-all" data-amount="250">
-                                    <span class="font-medium text-gray-900 dark:text-white">$250</span>
+                                    <span class="font-medium text-gray-900 dark:text-white" id="preset-amount-4">$250</span>
                                 </button>
                             </div>
                             <div class="mt-3 relative">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                    <span class="text-gray-500 dark:text-gray-400">$</span>
+                                    <span class="text-gray-500 dark:text-gray-400" id="custom-currency-symbol">$</span>
                                 </div>
                                 <input type="number" id="custom-amount" name="custom-amount" min="1" step="1" 
                                        class="pl-7 w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg form-input focus:outline-none focus:ring-1 focus:ring-gold-500 dark:bg-gray-700 dark:text-white" 
@@ -354,6 +359,8 @@
         </div>
     </footer>
 
+    <!-- Paystack Inline Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <script>
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -442,44 +449,109 @@
         });
 
         // Form submission
+        // Exchange rate (update as needed or fetch dynamically)
+        let usdToNgnRate = 1500; // Example rate, update to current
+
+        // Currency dropdown logic
+        const currencySelect = document.getElementById('currency-select');
+        const currencyLabel = document.getElementById('currency-label');
+        const customCurrencySymbol = document.getElementById('custom-currency-symbol');
+        const presetAmounts = [
+            document.getElementById('preset-amount-1'),
+            document.getElementById('preset-amount-2'),
+            document.getElementById('preset-amount-3'),
+            document.getElementById('preset-amount-4')
+        ];
+
+        function updatePresetAmounts() {
+            if (currencySelect.value === 'USD') {
+                presetAmounts[0].textContent = '$25';
+                presetAmounts[1].textContent = '$50';
+                presetAmounts[2].textContent = '$100';
+                presetAmounts[3].textContent = '$250';
+                currencyLabel.textContent = 'USD';
+                customCurrencySymbol.textContent = '$';
+            } else {
+                presetAmounts[0].textContent = '₦' + (25 * usdToNgnRate).toLocaleString();
+                presetAmounts[1].textContent = '₦' + (50 * usdToNgnRate).toLocaleString();
+                presetAmounts[2].textContent = '₦' + (100 * usdToNgnRate).toLocaleString();
+                presetAmounts[3].textContent = '₦' + (250 * usdToNgnRate).toLocaleString();
+                currencyLabel.textContent = 'NGN';
+                customCurrencySymbol.textContent = '₦';
+            }
+        }
+        currencySelect.addEventListener('change', updatePresetAmounts);
+        updatePresetAmounts();
+
+        // Update preset button values on currency change
+        donationOptions.forEach((option, idx) => {
+            option.addEventListener('click', function() {
+                donationOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                let amount = this.getAttribute('data-amount');
+                if (currencySelect.value === 'NGN') {
+                    amount = (parseInt(amount) * usdToNgnRate).toString();
+                }
+                donationAmountInput.value = amount;
+                customAmountInput.value = '';
+            });
+        });
+
+        customAmountInput.addEventListener('input', function() {
+            donationOptions.forEach(opt => opt.classList.remove('selected'));
+            let val = this.value;
+            if (currencySelect.value === 'NGN') {
+                donationAmountInput.value = val;
+            } else {
+                donationAmountInput.value = val;
+            }
+        });
+
+        // Paystack integration
         document.getElementById('donation-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             // Validate donation amount
-            if (!donationAmountInput.value && !customAmountInput.value) {
+            if (!donationAmountInput.value) {
                 alert('Please select or enter a donation amount');
                 return;
             }
-            
-            // If custom amount was entered, use that
-            if (customAmountInput.value) {
-                donationAmountInput.value = customAmountInput.value;
+            // Validate donor info
+            const email = document.getElementById('email').value;
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            if (!email || !firstName || !lastName) {
+                alert('Please fill in all required donor information');
+                return;
             }
-            
-            // Validate payment method specific fields
-            if (paymentMethodInput.value === 'card') {
-                const cardName = document.getElementById('card-name').value;
-                const cardNumber = document.getElementById('card-number').value;
-                const cardExpiry = document.getElementById('card-expiry').value;
-                const cardCvc = document.getElementById('card-cvc').value;
-                
-                if (!cardName || !cardNumber || !cardExpiry || !cardCvc) {
-                    alert('Please fill in all card details');
-                    return;
+            // Currency and amount
+            const currency = currencySelect.value;
+            let amount = parseInt(donationAmountInput.value);
+            // Paystack expects amount in kobo (NGN) or cents (USD)
+            let paystackAmount = amount * 100;
+            // Use your Paystack public key
+            let paystackKey = (currency === 'NGN') ? 'pk_test_xxxx' : 'pk_test_xxxx'; // Replace with your real keys
+            // Open Paystack payment modal
+            var handler = PaystackPop.setup({
+                key: paystackKey,
+                email: email,
+                amount: paystackAmount,
+                currency: currency,
+                firstname: firstName,
+                lastname: lastName,
+                callback: function(response){
+                    alert('Payment complete! Reference: ' + response.reference);
+                    document.getElementById('donation-form').reset();
+                    donationOptions[0].classList.add('selected');
+                    paymentMethods[0].classList.add('selected');
+                    frequencyOptions[0].classList.add('selected');
+                    cardPaymentForm.classList.remove('hidden');
+                    bankTransferInfo.classList.add('hidden');
+                },
+                onClose: function(){
+                    alert('Transaction was not completed, window closed.');
                 }
-            }
-            
-            // In a real implementation, you would process the payment here
-            // For this demo, we'll just show a success message
-            alert(`Thank you for your donation of $${donationAmountInput.value}! A receipt will be sent to your email.`);
-            this.reset();
-            
-            // Reset UI state
-            donationOptions[0].classList.add('selected');
-            paymentMethods[0].classList.add('selected');
-            frequencyOptions[0].classList.add('selected');
-            cardPaymentForm.classList.remove('hidden');
-            bankTransferInfo.classList.add('hidden');
+            });
+            handler.openIframe();
         });
 
         // Format card number as user types
